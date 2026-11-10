@@ -10,3 +10,10 @@ p, li { font-size: 1rem; }
 a { color: var(--accent); }
 nav { margin-bottom: 24px; font-size: 0.95rem; }
 footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+.download { margin: 24px 0 8px; padding: 20px; border: 1px solid var(--line); border-radius: 14px; text-align: center; }
+.button { display: inline-block; padding: 14px 28px; border-radius: 12px; background: var(--accent); color: #fff; font-weight: 700; font-size: 1.1rem; text-decoration: none; }
+.button.disabled { background: var(--line); color: var(--muted); cursor: default; }
+.note { color: var(--muted); font-size: 0.92rem; margin: 10px 0 0; }
+ol.steps { list-style: none; counter-reset: step; padding: 0; }
+ol.steps li { counter-increment: step; position: relative; padding: 0 0 18px 52px; }
+ol.steps li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
