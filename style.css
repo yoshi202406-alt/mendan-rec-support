@@ -1,5 +1,5 @@
-:root { --bg: #ffffff; --text: #1d1d1f; --muted: #5f6368; --line: #e3e3e6; --accent: #2a6fdb; }
-@media (prefers-color-scheme: dark) { :root { --bg: #161618; --text: #f2f2f4; --muted: #a8a8ad; --line: #34343a; --accent: #7aa7ff; } }
+:root { --bg: #ffffff; --text: #1d1d1f; --muted: #5f6368; --line: #e3e3e6; --accent: #2a6fdb; --panel: #f6f6f8; }
+@media (prefers-color-scheme: dark) { :root { --bg: #161618; --text: #f2f2f4; --muted: #a8a8ad; --line: #34343a; --accent: #7aa7ff; --panel: #1e1e22; } }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif; line-height: 1.8; }
 main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
@@ -17,3 +17,19 @@ footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
 ol.steps { list-style: none; counter-reset: step; padding: 0; }
 ol.steps li { counter-increment: step; position: relative; padding: 0 0 18px 52px; }
 ol.steps li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.shot { margin: 12px 0 4px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+.shot-title { margin: 0 0 12px; font-weight: 700; font-size: 0.95rem; }
+.shot-note { margin: 12px 0 0; color: var(--muted); font-size: 0.92rem; }
+.after { margin: 10px 0 0; }
+.win { border-radius: 8px; padding: 14px 16px; font-size: 0.92rem; line-height: 1.7; max-width: 420px; }
+.win + .win { margin-top: 10px; }
+.win p { margin: 0 0 12px; }
+.win p:last-child { margin-bottom: 0; }
+.win.edge { background: #ffffff; color: #1d1d1f; border: 1px solid #c8c8cc; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
+.win.edge .menu { padding-left: 12px; }
+.win.blue { background: #0063b1; color: #ffffff; }
+.win .head { font-size: 1.08rem; font-weight: 600; }
+.win .buttons { text-align: right; }
+.btnlike { display: inline-block; padding: 2px 16px; border: 1px solid currentColor; border-radius: 3px; }
+.press { display: inline-block; padding: 2px 8px; border-radius: 8px; outline: 3px solid #ff9f0a; outline-offset: 1px; font-weight: 700; white-space: nowrap; }
+.press .n { display: inline-flex; align-items: center; justify-content: center; width: 1.5em; height: 1.5em; margin-right: 6px; border-radius: 50%; background: #ff9f0a; color: #1d1d1f; font-size: 0.8em; font-weight: 700; }
